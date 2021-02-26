@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ready</title>
+</head>
+<body>
+    {% if error_code == 420 %}
+    <p>Please use a url at a same domain.</p>
+    <p>Error code: 420</p>
+    <hr/>
+    {% elif error_code == 421 %}
+    <p>Please contact the administrator.</p>
+    <p>Error code: 421</p>
+    <hr/>
+    {% elif error_code == 422 %}
+    <p>Please check your bot url.</p>
+    <p>Error code: 421</p>
+    <hr/>
+    {% endif %}
+    <form action = "/start_bot" method = "post">
+        <p>Enter bot URL:</p>
+        <p><input type = "text" name = "bot_url" /></p>
+        <p><input type = "submit" value = "submit" /></p>
+    </form>
+    <hr />
+    <p>Version: 1.0.0</p>
+</body>
+</html>
