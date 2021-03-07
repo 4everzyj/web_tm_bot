@@ -10,3 +10,6 @@ based on https://github.com/jankeromnes/terraforming-mars-bot
 
 ## v1.0.2
 - optimize system
+
+## v1.0.3
+- fix error code bug
