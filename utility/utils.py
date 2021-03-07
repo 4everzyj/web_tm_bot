@@ -21,9 +21,10 @@ def start_bot_cmd(bot_url, ip):
     except FileNotFoundError:
         return 421
     time.sleep(1)
-    if subprocess.Popen.poll(prc) is None:
+    ret = subprocess.Popen.poll(prc)
+    if ret is None:
         return 0
-    elif prc == 0:
+    elif ret == 0:
         return 0
     else:
         return 422
